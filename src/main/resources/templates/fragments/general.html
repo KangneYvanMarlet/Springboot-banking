@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head th:fragment="headerfiles">
+  <meta charset="UTF-8" />
+  <link th:href="@{/stylesheets/build/styles.css}" rel="stylesheet" />
+  <style>
+    /* Styles pour le thème gris foncé */
+    nav {
+      background-color: #333; /* Couleur de fond gris foncé */
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: #f2f2f2; /* Couleur du texte blanc */
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #555; /* Couleur de fond gris encore plus foncé au survol */
+    }
+
+    .nav-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .nav-links li {
+      float: left;
+    }
+
+    .nav-links li a {
+      display: block;
+      color: white; /* Couleur du texte blanc */
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .nav-links li a:hover {
+      background-color: #555; /* Couleur de fond gris encore plus foncé au survol */
+    }
+
+    .account-links {
+      float: right;
+    }
+
+    .account-links a {
+      display: block;
+      color: #f2f2f2; /* Couleur du texte blanc */
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .account-links a:hover {
+      background-color: #555; /* Couleur de fond gris encore plus foncé au survol */
+    }
+  </style>
+</head>
+<body>
+<div th:fragment="header">
+  <nav>
+    <a th:href="@{/}"><h1 style="margin: 0; padding: 14px 16px; color: white;">Banque</h1></a>
+    <ul class="nav-links">
+      <li><a th:href="@{/}" style="padding: 0;">Home</a></li>
+      <li><a th:href="@{/operations}" style="padding: 0;">Transactions</a></li>
+      <li><a th:href="@{/accounts}" style="padding: 0;">Comptes</a></li>
+
+    </ul>
+    <div class="account-links">
+      <a th:href="@{/auth/login}" style="padding: 14px 16px;">se deconnecter</a>
+
+
+    </div>
+  </nav>
+</div>
+<p>Allez à la page suivante pour voir les fragments en action</p>
+<div class="another">Ceci est une autre barre latérale</div>
+<button class="custom-button">Cliquez ici</button>
+<footer th:fragment="footer">
+  <a th:href="@{/fragments}">Index des fragments</a> |
+</footer>
+<th:block th:fragment="scripts">
+  <script type="module">
+    import hotwiredTurbo from "https://cdn.skypack.dev/@hotwired/turbo";
+  </script>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/html"
+>
+  <head th:replace="~{fragments/general.html :: headerfiles}">
+    <title>faire depot</title>
+  </head>
+  <body>
+    <header th:replace="~{fragments/general.html :: header}"></header>
+
+    <div>
+      <form method="post" th:action="@{#}">
+        <div class="inputs">
+          <input name="value" type="number" placeholder="deposit value" />
+        </div>
+        <button class="btn-dark" style="background-color: black; color: white;">depot</button>
+      </form>
+    </div>
+  </body>
+</html>

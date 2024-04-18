@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/html"
+>
+  <head th:replace="~{fragments/general.html :: headerfiles}">
+    <title>xxx</title>
+  </head>
+  <body>
+    <header th:replace="~{fragments/general.html :: header}"></header>
+
+    <h2>transactions</h2>
+
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <td>date</td>
+            <td>operation</td>
+            <td>montant</td>
+            <td>comptes</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="o: ${operations}">
+            <td th:text="${o.creationDate}"/>
+            <td th:text="${o.type}"/>
+            <td th:text="${o.value}"/>
+            <td th:text="${o.operator.accountId}"/>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <th></th>
+  <th:block th:replace="~{fragments/general.html :: scripts}"/>
+</html>

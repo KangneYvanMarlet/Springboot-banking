@@ -1,0 +1,153 @@
+body
+{
+    background-color: rgb(247, 247, 251);
+    padding: 0 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: #111;
+    &:hover
+    {
+      color: rgb(14, 159, 255);
+    }
+}
+
+.card
+{
+  box-shadow: 0 0 25px -15px #555;
+  padding: 20px;
+  background-color: white;
+  width: 380px;
+  border-radius: 20px;
+  h2
+  {
+    margin-bottom: 0.1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .card-info
+  {
+    font-size: 2.7rem;
+    color: #444;
+    font-weight:100;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.operation-card
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.btn-primary
+{
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgb(14, 159, 255);
+    padding: 0.8rem 0 ;
+    width: 232px;
+    border-radius: 2rem;
+    border: none;
+    cursor:pointer;
+
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    .nav-links
+    {
+        margin-left: 100px;
+        flex:1;
+        gap: 20px;
+        display: flex;
+
+    }
+
+    h1
+    {
+        margin: 0;
+    }
+}
+
+h2
+{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.table-footer
+{
+    text-align: center;
+    height: 40px;
+    background-color: #fff;
+padding: 10px 0;
+    a
+    {
+        
+        display: inline-block;
+        padding: 8px;
+        width: 92px;
+        cursor: pointer;
+        border: 2px solid rgb(0, 81, 255);
+        color:rgb(0, 81, 255) ;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+}
+.table
+{
+
+    table
+    {
+            width: 100%;
+                  text-align: center;
+      border-collapse: collapse;
+
+    thead
+      {
+        font-weight: bold;
+        background-color: rgb(0, 136, 255);
+        color: white;
+      }
+
+      tr
+      {
+        height: 50px;
+      }
+    }
+    background-color: white;
+    border-radius: 10px;
+      box-shadow: 0 0 25px -15px #555;
+
+      overflow: hidden;
+
+  
+
+
+}

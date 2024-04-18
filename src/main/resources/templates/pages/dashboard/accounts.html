@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/html"
+>
+  <head th:replace="fragments/general.html :: headerfiles">
+    <title>xxx</title>
+  </head>
+  <body>
+    <header th:replace="fragments/general.html :: header"></header>
+
+    <h2>Compte</h2>
+
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <td>id</td>
+            <td>type</td>
+            <td>numero compte</td>
+            <td>id compte</td>
+            <td>solde</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="a : ${accounts}">
+            <td th:text="${a.accountType}"/>
+            <td>transaction</td>
+
+
+            <td th:text="${a.accountNumber}"/>
+
+                        <td >
+              <a th:href="@{/accounts/{id}(id= ${a.accountId})}" th:text="${a.accountId}">
+            </td>
+            <td th:text="${a.value}"/>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <th
+  <th:block th:replace="fragments/general.html :: scripts"/>
+</html>

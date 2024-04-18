@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+
+>
+  <head>
+    <title>ff</title>
+    <head th:replace="fragments/general.html :: headerfiles">
+      <!-- Required meta tags -->
+    </head>
+  </head>
+  <body>
+    <header th:replace="fragments/general.html :: header"></header>
+    <section layout:fragment="custom-content">
+      <p>le contenu de votre page va ici</p>
+    </section>
+    <footer>
+      <p>Votre pied de page personnalisé ici</p>
+      <p layout:fragment="custom-footer">Votre pied de page personnalisé ici</p>
+    </footer>
+
+    <script type="module">
+      import hotwiredTurbo from "https://cdn.skypack.dev/@hotwired/turbo";
+    </script>
+  </body>
+</html>

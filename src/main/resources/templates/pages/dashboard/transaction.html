@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns="http://www.w3.org/1999/html"
+>
+  <head th:replace="~{fragments/general.html :: headerfiles}">
+    <title>make a deposit</title>
+  </head>
+  <body>
+    <header th:replace="~{fragments/general.html :: header}"></header>
+
+    <div>
+      <form method="post" th:action="@{#}">
+        <div class="inputs">
+          <input name="value" type="number" placeholder="deposit value" />
+          <input
+            name="recipientId"
+            type="text"
+            placeholder="receiver client id"
+          />
+        </div>
+        <button class="btn-dark">envoyer</button>
+      </form>
+    </div>
+  </body>
+</html>
